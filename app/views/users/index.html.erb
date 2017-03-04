@@ -1,0 +1,29 @@
+<h1>Welcome!</h1>
+
+<form action="contact" method="get">
+  <input type="text" name="first_name" value="" placeholder="First Name">
+  <br>
+  <input type="text" name="last_name" value="" placeholder="Last Name">
+  <br>
+  <input type="text" name="email" value="" placeholder="Email">
+  <br>
+  <input type="text" name="address" value="" placeholder="Address">
+  <br>
+  <input type="submit" name="" value="Create Contact">
+</form>
+
+<table>
+<% @contacts.each do |contact| %>
+<tr>
+<td>
+  <%= link_to 'Edit', update_info_path(contact.id)%>
+  <!-- Sets up "edit" link to update contact id  -->
+</td>
+<td>  <%= contact.first_name %></td>
+<td> <%= contact.last_name %> </td>
+<td>  <%= contact.email %> </td>
+<td>  <%= contact.address %> </td>
+</tr> <br>
+<% end %>
+
+</table>

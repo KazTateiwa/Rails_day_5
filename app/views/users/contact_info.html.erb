@@ -1,0 +1,13 @@
+
+
+<% if !@contact.nil? %>
+  Contacts successfully saved! <br>
+  <p></p>
+  <%= @contact.first_name %> 
+  <%= @contact.last_name %> <br>
+  <p></p>
+  <%= @contact.email %> <br>
+  <p></p>
+  <%= @contact.address %>
+
+<% end %>
